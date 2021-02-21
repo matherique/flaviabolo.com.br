@@ -21,7 +21,15 @@ const Container = styled.div`
 
   ul > li::before {
     content: '🌟';
-    margin: 0px 10px;
+    margin: 0px 5px;
+  }
+
+  @media (max-width: 800px) {
+    ul > li {
+      list-style: none;
+      font-size: 1.3rem;
+      margin: 5px 0px;
+    }
   }
 `
 
@@ -36,7 +44,7 @@ function TabelaPrecos({ recheios }: Props): JSX.Element {
       <ul>
         {recheios.map(recheio => (
           <li key={recheio.id}>
-            {recheio.nome} - {recheio.valor}/kg
+            <b>{recheio.nome}</b> - {recheio.valor}/kg
           </li>
         ))}
       </ul>

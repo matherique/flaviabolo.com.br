@@ -17,6 +17,12 @@ export default createGlobalStyle`
     font: 400 16px Roboto, sans-serif;
   }
   
+  @media (max-width: 1500px) {
+    :root {
+      font-size: 9px;
+    }
+  }
+
   @media (max-width: 800px) {
     :root {
       font-size: 11px;
