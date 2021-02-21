@@ -26,7 +26,7 @@ export default async function (
 
     await doc.useServiceAccountAuth({
       client_email: process.env.GOOGLE_CLIENT_EMAIL,
-      private_key: process.env.GOOGLE_PRIVATE_KEY
+      private_key: parseKey(process.env.GOOGLE_PRIVATE_KEY)
     })
 
     await doc.loadInfo()
@@ -42,14 +42,13 @@ export default async function (
 
     return res.status(200).json({
       date: new Date().toUTCString(),
-      recheios,
-      error: process.env.GOOGLE_PRIVATE_KEY
+      recheios
     })
   } catch (error) {
     return res.status(200).json({
       date: new Date().toUTCString(),
       recheios: [],
-      error: process.env.GOOGLE_PRIVATE_KEY
+      error: error.message
     })
   }
 }
