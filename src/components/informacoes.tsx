@@ -37,13 +37,13 @@ const Contato = styled.div`
 `
 
 function Informacoes(): JSX.Element {
+  const tel = '(12) 98265-2973'
   return (
     <Container>
       <img src="/logo.png" />
       <Contato>
         <p>
-          ☎️{' '}
-          <a href={`tel:${parseTelefone('(12) 3333-3333')}`}>(12) 3333-33333</a>{' '}
+          ☎️ <a href={`tel:${parseTelefone(tel)}`}>{tel}</a>{' '}
         </p>
       </Contato>
     </Container>

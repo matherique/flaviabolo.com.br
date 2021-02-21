@@ -9,7 +9,8 @@ type ResponseData = {
   error?: string
 }
 
-const TEMPO_CACHE = 60 * 60 * 12
+const DIAS = 1
+const TEMPO_CACHE = 60 * 60 * DIAS
 
 export default async function (
   req: NextApiRequest,
