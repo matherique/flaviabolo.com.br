@@ -48,7 +48,7 @@ export default async function (
     return res.status(200).json({
       date: new Date().toUTCString(),
       recheios: [],
-      error: error.message
+      error: parseKey(process.env.GOOGLE_PRIVATE_KEY)
     })
   }
 }
