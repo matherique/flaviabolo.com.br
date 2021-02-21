@@ -9,6 +9,7 @@ type Recheios = {
 const ROOT_URL = process.env.VERCEL_URL || 'http://localhost:3000'
 
 export const getServerSideProps: GetServerSideProps<Recheios> = async () => {
+  console.log(`${ROOT_URL}/api/recheios`)
   const dados = await fetch(`${ROOT_URL}/api/recheios`)
     .then(res => res.json())
     .then(res => res)
