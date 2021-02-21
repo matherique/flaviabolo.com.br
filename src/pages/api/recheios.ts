@@ -1,6 +1,7 @@
 import { GoogleSpreadsheet } from 'google-spreadsheet'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import type { Recheio } from 'types'
+import { parseKey } from 'utils'
 
 type ResponseData = {
   date: string
@@ -25,7 +26,7 @@ export default async function (
 
     await doc.useServiceAccountAuth({
       client_email: process.env.GOOGLE_CLIENT_EMAIL,
-      private_key: process.env.GOOGLE_PRIVATE_KEY
+      private_key: parseKey(process.env.GOOGLE_PRIVATE_KEY)
     })
 
     await doc.loadInfo()
