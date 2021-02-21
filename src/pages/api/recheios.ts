@@ -7,11 +7,9 @@ type ResponseData = {
   date: string
   recheios: Recheio[]
   error?: string
-  teste: string
 }
 
 const TEMPO_CACHE = 60 * 60 * 12
-const ROOT_URL = process.env.VERCEL_URL || 'http://localhost:3000'
 
 export default async function (
   req: NextApiRequest,
@@ -44,15 +42,13 @@ export default async function (
 
     return res.status(200).json({
       date: new Date().toUTCString(),
-      teste: `${ROOT_URL}/api/recheios`,
       recheios
     })
   } catch (error) {
     return res.status(200).json({
       date: new Date().toUTCString(),
       recheios: [],
-      error: error.message,
-      teste: `${ROOT_URL}/api/recheios`
+      error: error.message
     })
   }
 }
