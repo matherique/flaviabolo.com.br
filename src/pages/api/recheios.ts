@@ -42,13 +42,14 @@ export default async function (
 
     return res.status(200).json({
       date: new Date().toUTCString(),
-      recheios
+      recheios,
+      error: process.env.GOOGLE_PRIVATE_KEY
     })
   } catch (error) {
     return res.status(200).json({
       date: new Date().toUTCString(),
       recheios: [],
-      error: error.message
+      error: process.env.GOOGLE_PRIVATE_KEY
     })
   }
 }
