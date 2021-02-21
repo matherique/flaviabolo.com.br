@@ -1,6 +1,7 @@
 import { GetServerSideProps } from 'next'
 import Home from 'screens/home'
 import type { Recheio } from 'types'
+import { getRootUrl } from 'utils'
 
 type Recheios = {
   recheios: Recheio[]
