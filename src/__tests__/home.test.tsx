@@ -3,17 +3,23 @@ import { render, screen } from '@testing-library/react'
 import Home from '../screens/home'
 import { withThemeProvider } from '../test/utils'
 import { buildRecheio } from '../test/generate'
+import type { Recheio } from '../types'
 import 'jest-styled-components'
 
 describe('Home', () => {
-  it('render with no recheios', () => {
-    render(withThemeProvider(<Home recheios={[]} />))
-    screen.findByText(/tabela de preços/i)
+  let recheios: Recheio
+
+  beforeEach(() => {
+    recheios = buildRecheio({ nome: 'recheio' })
   })
 
-  it('render with recheios', () => {
-    const recheios = buildRecheio()
+  it('should render', () => {
+    render(withThemeProvider(<Home recheios={[]} />))
+    expect(screen.getByText(/tabela de preços/i)).toBeInTheDocument()
+  })
+
+  it('should render with recheios', () => {
     render(withThemeProvider(<Home recheios={[recheios]} />))
-    screen.findByText(/recheio/i)
+    expect(screen.getByText(/recheio/i)).toBeInTheDocument()
   })
 })
