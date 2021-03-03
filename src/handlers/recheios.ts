@@ -23,9 +23,6 @@ export class RecheioHandler {
     )
 
     try {
-      await this.spreadsheet.authenticate()
-      await this.spreadsheet.loadInfo()
-
       const rows = await this.spreadsheet.getRows()
 
       const recheios = rows.map(({ rowIndex, nome, valor }) => ({
