@@ -1,8 +1,8 @@
 # 🎂 My mom website using nextjs + google spreadsheet 
-this is my mom website, using nextjs and google spreadsheet API to get a list of all type of cakes that she makes
+This is the code form my mom website, using nextjs and google spreadsheet API to get a list of all type of cakes that she makes
 
 ## 💪 Motivation 
-my mom need a easy way to send to their customers a price list, and I'm not good with Photoshop like software's 😢
+My mom need a easy way to send to their customers a price list, and I'm not good with Photoshop like software's 😢
 So I make a "simple" site to her and now she only share a link. She don't have patience to learn how to use a admin panel and edit the list and prices, so I use Google SpreadSheet API to get all information from a spreadsheet, now she can edit in the spreadsheet and see the changes in 1 hour.
 
 ## 🧰 Tech 
@@ -12,6 +12,8 @@ Wrote using **next** with **typescript**, using the build in serveless API that 
 
 ## 🖥️ "Tests"
 I tried to write some tests to the components and the API route, its not a good test suit, i'm learning 
+
+To run all test use ```npm test ``` or ```yarn test``` to single run or ```npm run test:watch``` or ```yarn run test:watch``` to run tests in watch mode 
 
 ## 🔨 Usage
 
@@ -32,7 +34,7 @@ GOOGLE_PRIVATE_KEY= // private key provide by Google SpreadSheet API
 ```
 Get this information in [Google Developer Console](https://console.developers.google.com/)
 
-Run in dev mode using **dev** script 
+Run in dev mode using **dev** script ```npm run dev``` or ```yarn run dev``` 
 
 
 
