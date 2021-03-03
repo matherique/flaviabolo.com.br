@@ -1,4 +1,8 @@
-# 🎂 My mom website using nextjs + google spreadsheet 
+<h1 align="center">🎂 My mom website using nextjs + google spreadsheet </h1>
+
+[![Coverage Status](https://coveralls.io/repos/github/matherique/flaviabolo.com.br/badge.svg?branch=main)](https://coveralls.io/github/matherique/flaviabolo.com.br?branch=main)
+
+
 This is the code form my mom website, using nextjs and google spreadsheet API to get a list of all type of cakes that she makes
 
 ## 💪 Motivation 
