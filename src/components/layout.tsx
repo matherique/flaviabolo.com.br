@@ -2,7 +2,7 @@ import * as React from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
-  width: 60vw;
+  width: 80vw;
   margin: 15vh auto;
 
   @media (max-width: 800px) {
