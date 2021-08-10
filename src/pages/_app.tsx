@@ -10,7 +10,9 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <ThemeProvider theme={theme}>
       <Head>
-        <title>Flávia Bolos</title>
+        <title>Bolos Flávia</title>
+        <meta property="og:description" content="Com açúcar e com afeto, fiz seu bolo predileto." />
+        <meta property="og:image" content="https://www.bolosflavia.com.br/logo.png"/>
       </Head>
       <Component {...pageProps} />
       <GlobalStyles />
